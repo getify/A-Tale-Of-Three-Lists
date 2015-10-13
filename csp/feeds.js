@@ -156,41 +156,38 @@ var Feeds = (function FeedsAPI(){
 
 	function setupMyFeed(go) {
 		go(handleItemSelection);
+	}
 
+	function *handleItemSelection() {
+		var tmp, my_feed_text = {},
+			feed_id, item_text, $item;
 
-		// ***********************************
+		while (true) {
+			// wait for item-selection signal
+			tmp = yield Ac.take(
+				publicAPI.channels.item_selections
+			);
 
-		function *handleItemSelection() {
-			var tmp, my_feed_text = {},
-				feed_id, item_text, $item;
+			feed_id = tmp[0];
+			item_text = tmp[1];
+			$item = tmp[2];
 
-			while (true) {
-				// wait for item-selection signal
-				tmp = yield Ac.take(
-					publicAPI.channels.item_selections
+			// not a duplicate message?
+			if (!(item_text in my_feed_text)) {
+				my_feed_text[item_text] = true;
+
+				// signal my-feed insertion
+				yield Ac.put(
+					publicAPI.channels.my_feed_insertions,
+					[feed_id,$item]
 				);
-
-				feed_id = tmp[0];
-				item_text = tmp[1];
-				$item = tmp[2];
-
-				// not a duplicate message?
-				if (!(item_text in my_feed_text)) {
-					my_feed_text[item_text] = true;
-
-					// signal my-feed insertion
-					yield Ac.put(
-						publicAPI.channels.my_feed_insertions,
-						[feed_id,$item]
-					);
-				}
-				else {
-					// signal kill (duplicate) item
-					yield Ac.put(
-						publicAPI.channels.feed_kills,
-						$item
-					);
-				}
+			}
+			else {
+				// signal kill (duplicate) item
+				yield Ac.put(
+					publicAPI.channels.feed_kills,
+					$item
+				);
 			}
 		}
 	}
