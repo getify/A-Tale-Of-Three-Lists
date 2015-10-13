@@ -32,7 +32,7 @@ The following patterns are currently implemented for inspection/comparison:
 
 I use simple jQuery and CSS for the UI of this demo. I don't want that to change. This project is not about comparing different frameworks' approaches to managing and rendering the UI.
 
-That'd be a fun project for you to fork off this one, and compare Angular, React, Backbone, Ember, etc for the UI processing of the lists, kinda like TodoMVC does.
+That'd be a fun project [for you to fork](/../../fork) off this one, and compare Angular, React, Backbone, Ember, etc for the UI processing of the lists, kinda like TodoMVC does.
 
 But this project is about exploring the relative merits and shortcomings of each async pattern approach. Any other differences would be unnecessary distracting noise.
 
