@@ -20,13 +20,13 @@ I will also be adding more detailed write-ups of these differences over time, as
 
 The following patterns are currently implemented for inspection/comparison:
 
-* [Plain Callbacks](/../../tree/master/callback/): the old-school tried-and-true callback
-* [Thunks](/../../tree/master/thunk/): thunks are using closure to make a function into an async-capable container for future values (like a promise without the API)
-* [Promises](/../../tree/master/promise/): using only bare ES6 promises
-* [Promises+Generators](/../../tree/master/promise-generator/): combining promises & generators, assisted by [asynquence](http://github.com/getify/asynquence)'s generator processing.
-* [asynquence Flavored](/../../tree/master/asynquence/): adding in the spice and flavor that [asynquence](http://github.com/getify/asynquence) brings to async programming.
-* [Reactive Sequences (Observables)](/../../tree/master/reactive-sequence/): showing [asynquence](http://github.com/getify/asynquence)'s flavor of observables, called "reactive sequences".
-* [CSP](/../../tree/master/csp/): showing [asynquence](http://github.com/getify/asynquence)'s emulation of [CSP](https://github.com/getify/asynquence/tree/master/contrib#go-style-csp-api-emulation) (channel-based concurrency).
+* [Plain Callbacks](/../../tree/master/callback/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/callback/index.html)**: the old-school tried-and-true callback.
+* [Thunks](/../../tree/master/thunk/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/thunk/index.html)**: thunks use closure to make a function into an async-capable container for future values (like a promise without the API).
+* [Promises](/../../tree/master/promise/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/promise/index.html)**: using only bare ES6 promises.
+* [Promises+Generators](/../../tree/master/promise-generator/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/promise-generator/index.html)**: combining promises & generators, assisted by [asynquence](http://github.com/getify/asynquence)'s generator processing.
+* [asynquence Flavored](/../../tree/master/asynquence/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/asynquence/index.html)**: adding in the spice and flavor that [asynquence](http://github.com/getify/asynquence) brings to async programming.
+* [Reactive Sequences (Observables)](/../../tree/master/reactive-sequence/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/reactive-sequence/index.html)**: showing [asynquence](http://github.com/getify/asynquence)'s flavor of observables, called "reactive sequences".
+* [CSP](/../../tree/master/csp/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/csp/index.html)**: showing [asynquence](http://github.com/getify/asynquence)'s emulation of [CSP](https://github.com/getify/asynquence/tree/master/contrib#go-style-csp-api-emulation) (channel-based concurrency).
 
 ## Not A UI/Framework Bikeshed
 
@@ -42,7 +42,9 @@ But this project is about exploring the relative merits and shortcomings of each
 
 2. **-OR-** Clone this repo, then run `npm install` from inside the main root directory to install the dependencies.
 
-3. Now, open any one of the `index.html` files using the `file://` protocol. If you want to run the demos using a local file server (like `python` or `node`), make sure to start the server in the root directory, as the HTML files rely on being able to access dependencies in the `./node_modules` directory.
+3. Now, open any one of the `index.html` files using the `file://` protocol.
+
+4. **-OR-** You can run the demos using a local file server (like `python` or `node`). Make sure to start the server in each demo's directory, respectively.
 
 ## License
 

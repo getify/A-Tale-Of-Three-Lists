@@ -22,8 +22,13 @@
 
 <script src="jquery.js"></script>
 <script src="eventemitter2.js"></script>
-<script src="../node_modules/asynquence/asq.js"></script>
-<script src="../node_modules/asynquence-contrib/contrib-es6.src.js"></script>
+
+<!-- hack to patch script URLs for both file:// and http:// viewing -->
+<script src="fix-script-urls.js" data-srcs="
+	../node_modules/asynquence/asq.js
+	../node_modules/asynquence-contrib/contrib-es6.src.js
+"></script>
+
 <script src="dummy-data.js"></script>
 <script src="ui.js"></script>
 <script src="feeds.js"></script>
