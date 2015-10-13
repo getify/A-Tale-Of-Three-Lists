@@ -20,13 +20,13 @@ I will also be adding more detailed write-ups of these differences over time, as
 
 The following patterns are currently implemented for inspection/comparison:
 
-* [Plain Callbacks](tree/master/callback/): the old-school tried-and-true callback
-* [Thunks](tree/master/thunk/): thunks are using closure to make a function into an async-capable container for future values (like a promise without the API)
-* [Promises](tree/master/promise/): using only bare ES6 promises
-* [Promises+Generators](tree/master/promise-generator/): combining promises & generators, assisted by [asynquence](http://github.com/getify/asynquence)'s generator processing.
-* [asynquence Flavored](tree/master/asynquence/): adding in the spice and flavor that [asynquence](http://github.com/getify/asynquence) brings to async programming.
-* [Reactive Sequences (Observables)](tree/master/reactive-sequence/): showing [asynquence](http://github.com/getify/asynquence)'s flavor of observables, called "reactive sequences".
-* [CSP](tree/master/csp/): showing [asynquence](http://github.com/getify/asynquence)'s emulation of [CSP](https://github.com/getify/asynquence/tree/master/contrib#go-style-csp-api-emulation) (channel-based concurrency).
+* [Plain Callbacks](/../../tree/master/callback/): the old-school tried-and-true callback
+* [Thunks](/../../tree/master/thunk/): thunks are using closure to make a function into an async-capable container for future values (like a promise without the API)
+* [Promises](/../../tree/master/promise/): using only bare ES6 promises
+* [Promises+Generators](/../../tree/master/promise-generator/): combining promises & generators, assisted by [asynquence](http://github.com/getify/asynquence)'s generator processing.
+* [asynquence Flavored](/../../tree/master/asynquence/): adding in the spice and flavor that [asynquence](http://github.com/getify/asynquence) brings to async programming.
+* [Reactive Sequences (Observables)](/../../tree/master/reactive-sequence/): showing [asynquence](http://github.com/getify/asynquence)'s flavor of observables, called "reactive sequences".
+* [CSP](/../../tree/master/csp/): showing [asynquence](http://github.com/getify/asynquence)'s emulation of [CSP](https://github.com/getify/asynquence/tree/master/contrib#go-style-csp-api-emulation) (channel-based concurrency).
 
 ## Not A UI/Framework Bikeshed
 
