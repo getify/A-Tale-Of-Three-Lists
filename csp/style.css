@@ -1,0 +1,98 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 120%;
+}
+
+#feed-1, #feed-2 {
+	padding: 5px 15px;
+	margin: 0px 30px;
+	display: inline-block;
+	position: relative;
+	width: 250px;
+	height: 400px;
+	border: 3px solid #000;
+	vertical-align: top;
+}
+
+#feed-1 > .toggle,
+#feed-2 > .toggle {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: -25px;
+}
+
+#my-feed {
+	padding: 5px 15px;
+	margin: 0px 30px;
+	display: inline-block;
+	position: relative;
+	width: 400px;
+	height: 500px;
+	border: 3px solid #000;
+	background-color: #f0f0f0;
+	vertical-align: top;
+}
+
+#feed-1 > .content,
+#feed-2 > .content,
+#my-feed > .content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.item {
+	display: block;
+	position: relative;
+	margin: 10px 0px;
+	padding: 5px;
+	width: 100%;
+	color: #000;
+	overflow: hidden;
+	white-space: nowrap;
+	text-decoration: none;
+	text-overflow: ellipsis;
+}
+
+.item.floating {
+	cursor: default;
+	position: absolute;
+	transition: left 0.3s ease-out, top 0.3s ease-out;
+	max-width: 214px;
+	max-height: 100px;
+}
+
+.item.killed {
+	text-decoration: line-through;
+}
+
+#feed-1 > .content > .item,
+#feed-2 > .content > .item {
+	max-height: 100px;
+}
+
+#feed-1 > .content > .item:hover,
+#feed-2 > .content > .item:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+#my-feed > .content > .item {
+	cursor: default;
+	max-height: inherit;
+	white-space: normal;
+	overflow: auto;
+	text-overflow: inherit;
+}
+
+.first-list {
+	background-color: #ffb8b3;
+}
+
+.second-list {
+	background-color: #b3caff;
+}

@@ -1,0 +1,29 @@
+{
+	"name": "a-tale-of-three-lists",
+	"version": "1.0.0",
+	"description": "exploring async patterns with a silly async demo",
+	"dependencies": {
+		"native-promise-only": "latest",
+		"asynquence": "latest",
+		"asynquence-contrib": "latest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/getify/a-tale-of-three-lists.git"
+	},
+	"keywords": [
+		"async",
+		"flow-control",
+		"promise",
+		"generator",
+		"reactive",
+		"observable"
+	],
+	"bugs": {
+		"url": "https://github.com/getify/a-tale-of-three-lists/issues",
+		"email": "getify@gmail.com"
+	},
+	"homepage": "http://github.com/getify/a-tale-of-three-lists",
+	"author": "Kyle Simpson <getify@gmail.com>",
+	"license": "MIT"
+}
