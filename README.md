@@ -36,6 +36,14 @@ That'd be a fun project [for you to fork](/../../fork) off this one, and compare
 
 But this project is about exploring the relative merits and shortcomings of each async pattern approach. Any other differences would be unnecessary distracting noise.
 
+## To Run Demos Locally
+
+1. Install from `npm` with `npm install a-tale-of-three-lists`. Verify that the `node_modules` dependencies directory is installed in the root directory.
+
+2. **-OR-** Clone this repo, then run `npm install` from inside the main root directory to install the dependencies.
+
+3. Now, open any one of the `index.html` files using the `file://` protocol. If you want to run the demos using a local file server (like `python` or `node`), make sure to start the server in the root directory, as the HTML files rely on being able to access dependencies in the `./node_modules` directory.
+
 ## License
 
 The code and all the documentation are released under the MIT license.
