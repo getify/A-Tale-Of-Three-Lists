@@ -2,9 +2,11 @@
 
 A sorta-sophisticated but still silly async events processing demo.
 
-The demo simulates a feed of data that's sampled at different speeds, filtered into two lists (red and blue). You can select an item from either list and it's added to your saved list in the middle. Selected duplicates are marked off and then removed.
+The demo simulates a feed of data that's sampled at different speeds, filtered into two lists (red and blue). You can select an item from either list and it's added to your saved list in the middle. Selected duplicates are marked off and then removed. Also, both feeds can be paused.
 
-<img src="./screen.png" width="400" alt="screenshot of demo">
+[<img src="./screen.png" width="400" alt="screenshot of demo">](https://rawgit.com/getify/a-tale-of-three-lists/master/callback/index.html)
+
+**[RUN 'CALLBACKS' DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/callback/index.html)** (see [more](#compared-patterns) below)
 
 ## Why
 
