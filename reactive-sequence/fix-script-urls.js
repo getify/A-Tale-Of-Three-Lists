@@ -14,7 +14,7 @@
 		if (src) {
 			try {
 				if (remoteURLNeeded && /\/node_modules\//.test(src)) {
-					src = src.replace(/^.*\/node_modules\/([^\/]+)\//,"https://rawnpm.getify.io/$1/latest/");
+					src = src.replace(/^.*\/node_modules\/([^\/]+)\//,"https://unpkg.com/$1@latest/");
 				}
 				document.write("<sc" + "ript src=\"" + src + "\"></scr" + "ipt>");
 			} catch (err) {}
