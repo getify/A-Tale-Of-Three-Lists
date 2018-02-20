@@ -128,9 +128,7 @@
 		}
 	}
 
-	function *insertMyFeedItem(token) {
-		var feed_id = token.messages[0];
-		var $item = token.messages[1];
+	function *insertMyFeedItem(feed_id, $item) {
 		var $floating_item = $item.clone().addClass("floating");
 
 		if (feed_id == 1) $floating_item.addClass("first-list");
