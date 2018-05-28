@@ -29,7 +29,7 @@ The following patterns are currently implemented for inspection/comparison:
 * [asynquence Flavored](/../../tree/master/asynquence/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/asynquence/index.html)**: adding in the spice and flavor that [asynquence](http://github.com/getify/asynquence) brings to async programming.
 * [Reactive Sequences (Observables)](/../../tree/master/reactive-sequence/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/reactive-sequence/index.html)**: showing [asynquence](http://github.com/getify/asynquence)'s flavor of observables, called "reactive sequences".
 * [CSP](/../../tree/master/csp/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/csp/index.html)**: showing [asynquence](http://github.com/getify/asynquence)'s emulation of [CSP](https://github.com/getify/asynquence/tree/master/contrib#go-style-csp-api-emulation) (channel-based concurrency).
-* [SAM] (/../../tree/master/sam/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/sam/index.html)** showcasing [SAM](http://sam.js.org/) pattern of dealing with async data by avoiding estimations in traditional programming.
+* [SAM](/../../tree/master/sam/) | **[RUN DEMO](https://rawgit.com/getify/a-tale-of-three-lists/master/sam/index.html)** showcasing [SAM](http://sam.js.org/) pattern of dealing with async data by avoiding estimations in traditional programming.
 ## Not A UI/Framework Bikeshed
 
 I use simple jQuery and CSS for the UI of this demo. I don't want that to change. This project is not about comparing different frameworks' approaches to managing and rendering the UI.
