@@ -28,7 +28,7 @@
 				function handleStatusToggle(st){
 					if (st1 !== st) {
 						st1 = st;
-						monitorFeedStatus(st1,st2);
+						monitorFeedStatus(st1,st2,1);
 					}
 				}
 			);
@@ -42,7 +42,7 @@
 				function handleStatusToggle(st){
 					if (st2 !== st) {
 						st2 = st;
-						monitorFeedStatus(st1,st2);
+						monitorFeedStatus(st1,st2,2);
 					}
 				}
 			);
@@ -71,7 +71,7 @@
 			}
 		});
 
-		sampledStream(delay,function nextStreamSample() {
+		sampledStream(delay,feedID, function nextStreamSample() {
 			// feed item waiting and feed still running?
 			if (last != null && feed_is_running) {
 				EVT.emit("feed-insertion",feedID,last);
@@ -84,19 +84,27 @@
 		};
 	}
 
-	function sampledStream(delay,cb) {
+	function sampledStream(delay, feedID,cb) {
 		// throttle feed sampling
-		var intv = setInterval(cb,delay);
+		var interval;
+		EVT.on("start-" + feedID, function startStream() {
+			clearInterval(interval); // in case clearing from a pause
+			interval = setInterval(cb,delay);
+		})
+		EVT.emit("start-" + feedID);
+		EVT.on("pause", function cleanupInterval() {
+			clearInterval(interval);
+		});
 	}
 
-	function monitorFeedStatus(running1,running2) {
+	function monitorFeedStatus(running1,running2,feedID) {
 		// both feeds paused?
 		if (!running1 && !running2) {
-			// TODO: pause the item feed
+			EVT.emit("pause");
 		}
 		// keep calm and carry on
 		else {
-			// TODO: resume the item feed
+			EVT.emit("start-" + feedID);
 		}
 	}
 
